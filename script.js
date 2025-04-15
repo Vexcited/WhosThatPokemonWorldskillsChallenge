@@ -100,7 +100,7 @@ window.handleGuess = async (event) => {
   // Si jamais on a pas de valeur, on ne fait rien.
   if (!value) return;
 
-  if (value === pokemonName.toLowerCase() || value === "true") {
+  if (value === pokemonName.toLowerCase()) {
     MODAL.classList.add('hidden');
 
     // On affiche l'image du Pokémon avec des confettis.
