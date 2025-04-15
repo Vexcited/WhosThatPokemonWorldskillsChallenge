@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Who's that Pokemon?</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <audio src="./whos-that-pokemon.mp3" id="audio" preload="auto"></audio>
+  <div id="restrictions" class="container">
+    <p>
+      You have to interact with the webpage to start the experience, because of audio in browsers restrictions.
+      You can either click on the button below or anywhere on this page.
+    </p>
+    <button type="button">You can click here to begin!</button>
+  </div>
+
+  <main class="container hidden">
+    <div class="pokemon-container">
+      <img alt="Who's that Pokemon ?" src="./whos-that-pokemon.png" class="whos-that-pokemon" draggable="false">
+    </div>
+    <div id="modal-1" class="modal hidden">
+      <div class="modal-body">
+        <h1>Name that Pokemon!</h1>
+        <form class="guess-form" onsubmit="handleGuess(event)">
+          <input class="guess-value" type="text">
+          <button type="submit" class="guess-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
